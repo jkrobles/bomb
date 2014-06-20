@@ -386,16 +386,21 @@ OPM {
 	    kline = "ZLINE +%i * 4h :Tor exit server detected. See www.dan.me.uk/torcheck?ip=%i for more information.";
 	};
 
-	/* bl.spamcop.net - http://bl.spamcop.net/ */
-	blacklist {
-	    name = "bl.spamcop.net";
-	    type = "A record reply";
-	    reply {
-		2 = "Blacklisted";
-	    };
-	    ban_unknown = yes;
-	    kline = "ZLINE +%i * 4h :You have a host listed in the spamcop DNSBL. For more information, visit http://www.spamcop.net/w2m?action=checkblock&ip=%i";
-	};
+
+	/*
+	 * Other optional DNSBL's [disabled by default]
+	 */
+	 
+	/* bl.spamcop.net - http://bl.spamcop.net/ - SMTP scanner */
+	#blacklist {
+	#    name = "bl.spamcop.net";
+	#    type = "A record reply";
+	#    reply {
+	#	2 = "Blacklisted";
+	#    };
+	#    ban_unknown = yes;
+	#    kline = "ZLINE +%i * 4h :You have a host listed in the spamcop DNSBL. For more information, visit http://www.spamcop.net/w2m?action=checkblock&ip=%i";
+	#};
 
 	/*
 	 * You can report the insecure proxies you find to a DNSBL also!
