@@ -250,7 +250,7 @@ IRC {
 	#kline = "KLINE *@%h :Open Proxy found on your host. Please visit www.blitzed.org/proxy?ip=%i for more information.";
 
 	/* A ZLINE example for IRCu: */
-        kline = "GLINE +%i * 4h :Open proxy found on your host. Please visit www.blitzed.org/proxy?ip=%i for more information.";
+        kline = "ZLINE +%i * 4h :Open proxy found on your host. Please visit www.blitzed.org/proxy?ip=%i for more information.";
 
 	/* A GLINE example for IRC: */
 	#kline = "GLINE +*@%i * 4h :Open proxy found on your host. Please visit www.blitzed.org/proxy?ip=%i for more information.";
@@ -346,7 +346,7 @@ OPM {
 	   /* The kline message sent for this specific blacklist, remember to put
 	    * the removal method in this.
 	    */
-	   kline = "GLINE +%i * 4h :You have a host listed in the DroneBL. For more information, visit http://dronebl.org/lookup_branded.do?ip=%i&network=MyNetwork";
+	   kline = "ZLINE +%i * 4h :You have a host listed in the DroneBL. For more information, visit http://dronebl.org/lookup_branded.do?ip=%i&network=MyNetwork";
 	};
 
         /* tor.dnsbl.sectoor.de - http://www.sectoor.de/tor.php */
@@ -357,7 +357,7 @@ OPM {
               1 = "Tor exit server";
            };
            ban_unknown = no;
-           kline = "GLINE +%i * 4h :Tor exit server detected. See www.sectoor.de/tor.php?ip=%i for more information";
+           kline = "ZLINE +%i * 4h :Tor exit server detected. See www.sectoor.de/tor.php?ip=%i for more information";
         };
 
          /* rbl.efnet.org - http://rbl.efnet.org/ */
@@ -372,7 +372,7 @@ OPM {
               5 = "Drone";
            };
            ban_unknown = yes;
-           kline = "GLINE +%i * 4h :Listed in rbl.efnet.org. See rbl.efnet.org/?i=%i";
+           kline = "ZLINE +%i * 4h :Listed in rbl.efnet.org. See rbl.efnet.org/?i=%i";
         };
 
 	/* tor.dan.me.uk - http://tor.dan.me.uk/ */
@@ -383,7 +383,7 @@ OPM {
 	       1 = "TOR exit server";
 	    };
 	    ban_unknown = yes;
-	    kline = "GLINE +%i * 4h :Tor exit server detected. See www.dan.me.uk/torcheck?ip=%i for more information.";
+	    kline = "ZLINE +%i * 4h :Tor exit server detected. See www.dan.me.uk/torcheck?ip=%i for more information.";
 	};
 
 	/* bl.spamcop.net - http://bl.spamcop.net/ */
@@ -394,7 +394,7 @@ OPM {
 		2 = "Blacklisted";
 	    };
 	    ban_unknown = yes;
-	    kline = "GLINE +%i * 4h :You have a host listed in the spamcop DNSBL. For more information, visit http://www.spamcop.net/w2m?action=checkblock&ip=%i";
+	    kline = "ZLINE +%i * 4h :You have a host listed in the spamcop DNSBL. For more information, visit http://www.spamcop.net/w2m?action=checkblock&ip=%i";
 	};
 
 	/*
