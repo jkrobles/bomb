@@ -1,10 +1,14 @@
 /*
+Andro what's up?
+- Tidus
+
  * BOMB sample configuration
  *
  * Based on BOPM with some added support for ircu-based networks and
  * support for reading connect notices in channels for parsing.
  *
  */
+
 
 options {
 	/*
